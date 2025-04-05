@@ -95,14 +95,6 @@ const MainTabNavigator = () => {
           headerShown: false
         }}
       />
-      <Tab.Screen
-        name="Cart"
-        component={CartScreen}
-        options={{ 
-          title: 'კალათა',
-          tabBarBadge: cartItems.length > 0 ? cartItems.length : null, 
-        }}
-      />
     </Tab.Navigator>
   );
 };
@@ -112,18 +104,19 @@ const HomeStackNavigator = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#fff',
+          backgroundColor: 'gold',
         },
         headerTintColor: '#333',
         headerTitleStyle: {
           fontWeight: 'bold',
+          paddingBottom: 10,
         },
       }}
     >
-      <Stack.Screen
-        name="HomeScreen"
+       <Stack.Screen
+        name="name"
         component={HomeScreen}
-        options={{ title: 'მთავარი გვერდი' }}
+        options={{ title: 'Mymarket.ge' }}
       />
       <Stack.Screen
         name="ProductDetail"

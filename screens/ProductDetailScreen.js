@@ -78,15 +78,6 @@ const ProductDetailScreen = ({ route, navigation }) => {
         <Text style={styles.title}>{displayProduct.title}</Text>
         <Text style={styles.price}>{displayProduct.price.toFixed(2)} ₾</Text>
         <Text style={styles.category}>{displayProduct.category}</Text>
-
-        <View style={styles.ratingContainer}>
-          <Ionicons name="star" size={18} color="#f1c40f" />
-          <Text style={styles.rating}>
-            {displayProduct.rating?.rate || 4.5} (
-            {displayProduct.rating?.count || 120} შეფასება)
-          </Text>
-        </View>
-
         <Text style={styles.descriptionTitle}>აღწერა</Text>
         <Text style={styles.description}>{displayProduct.description}</Text>
 
@@ -109,6 +100,7 @@ const ProductDetailScreen = ({ route, navigation }) => {
     </ScrollView>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
